@@ -119,12 +119,12 @@ h4 {
 
 }
 
-/* Включение отступа и границы в общую ширину и высоту элемента */
+
 * {
     box-sizing: border-box;
 }
 
-/* Удалите поля и отступы из списка */
+
 ul {
     margin: 0;
     padding: 0;
@@ -132,7 +132,7 @@ ul {
     flex-direction: column;
 }
 
-/* Стиль элементов списка */
+
 ul li {
     cursor: pointer;
     position: relative;
@@ -141,31 +141,30 @@ ul li {
     font-size: 18px;
     transition: 0.2s;
 
-    /* сделайте элементы списка невыбираемыми */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-/* Установить все нечетные элементы списка в другой цвет (зебра) */
+
 ul li:nth-child(odd) {
     background: #f9f9f9;
 }
 
-/* Более темный фон-цвет при наведении */
+
 ul li:hover {
     background: #ddd;
 }
 
-/* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
+
 ul li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
 
-/* Добавить "checked" отметить при нажатии на кнопку */
+
 ul li.checked::before {
     content: '';
     position: absolute;
@@ -179,7 +178,7 @@ ul li.checked::before {
     width: 7px;
 }
 
-/* Стиль кнопки "Закрыть" */
+
 .close {
     position: absolute;
     right: 0;
@@ -192,7 +191,7 @@ ul li.checked::before {
     color: white;
 }
 
-/* Стиль заголовка */
+
 .hea {
     background-color: lightsteelblue;
     padding: 30px 40px;
@@ -200,14 +199,14 @@ ul li.checked::before {
     text-align: center;
 }
 
-/* Очистить поплавки после заголовка */
+
 .hea:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Стиль ввода */
+
 input {
     margin: 0;
     border: none;
@@ -218,7 +217,7 @@ input {
     font-size: 16px;
 }
 
-/* Стиль кнопки "Добавить" */
+
 .addBtn {
     padding: 10px;
     width: 25%;
