@@ -5,10 +5,28 @@
     <meta charset="UTF-8">
     <title>Мое резюме</title>
     <link rel="stylesheet" href="outline.css">
+    <script src="prog.js"></script>
 </head>
 
 <body>
+<!--<div class="wrapper">
+    <header class="h">
+        <div class="header_burger">
+            <span></span>
+        </div>
+        <nav class="header_menu">
+            <ul class="header_list">
+                <li> <a href= "#aboutme">About me</a></li>
+                <li><a href= "#myskills">My skills</a></li>
+                <li><a href="#myprojects">My projects</a></li>
+                <li><a href="#mycontacts">My contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>-->
 <header>
+
+
     <div class="firstblock">
         <div class="name">
             <h1>Kristina Kuksenko</h1>
@@ -18,16 +36,32 @@
             <sup>Follow your heart.</sup>
         </div>
     </div>
-    <nav>
-        <ul>
-            <li><a href= "#aboutme">About me</a></li>
-            <li><a href= "#myskills">My skills</a></li>
-            <li><a href="#myprojects">My projects</a></li>
-            <li><a href="#mycontacts">My contacts</a></li>
+    <div class="hamburger_menu">
+        <input id="menu_toggle" type="checkbox" />
+        <label class="menu_btn" for="menu_toggle">
+            <span></span>
+        </label>
+
+        <ul class="menu_box">
+            <li><a class="menu_item" href= "#aboutme">About me</a></li>
+            <li><a class="menu_item" href= "#myskills">My skills</a></li>
+            <li><a class="menu_item" href="#myprojects">My projects</a></li>
+            <li><a class="menu_item" href="#mycontacts">My contacts</a></li>
         </ul>
+
+</div>
+    <nav>
+    <ul>
+        <li><a href= "#aboutme">About me</a></li>
+        <li><a href= "#myskills">My skills</a></li>
+        <li><a href="#myprojects">My projects</a></li>
+        <li><a href="#mycontacts">My contacts</a></li>
+    </ul>
     </nav>
 </header>
 <main>
+
+
     <div id= "aboutme" class="aboutme">
         <h4><b>About me</b></h4>
         <article>My name is Kristina Kuksenko. <br>I am a 3rd year student at ITMO University.</br> In my free time, sometimes I like to make up websites to gain new skills.</article>
@@ -72,28 +106,49 @@
         </ul>
     </div>
     <div class="codesnippet">
-        <h6><b>Code snippet</b></h6>
-        <pre>
-            <code>
-                public class Snippet {
-                    public static void main(String[] args) {
-                        System.out.println(&quot;Have a nice day to everyone!&quot;);
-    }
-}
-            </code>
-        </pre>
+        <a href="snippet.html"><h4><b>Check out my code snippet</b></h4></a>
+    </div>
+
+    <div class="table">
+        <a href="table.html"><h4><b>Look at my plans for the week</b></h4></a>
+    </div>
+
+    <div class="todo">
+        <a href="todo.html"><h4><b>ToDo List</b></h4></a>
 
     </div>
+
+
     <div class="loadtime">
-        <h6><b>Load time:</b></h6>
+        <a href="load.html"><h4><b>Check out load time!</b></h4></a>
+    </div>
+
+    <div class="freeblock">
 
     </div>
+
+
+
+
+
 </main>
 <footer>
     <section>
-        <h5><time>2021. </time>Санкт-Петербург, Россия. © Кристина Куксенко</h5></section>
+        <h5><time>2021. </time>Санкт-Петербург, Россия. © Кристина Куксенко</h5>
+    </section>
+
 </footer>
 
-</body>
 
+
+<!--<div class="modal" id="modal">
+     не скролиться
+    <button class="class-button" id="close-button">Закрыть</button>
+    <div class="modal-guts">
+        - скролиться
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay"></div>-->
+</body>
 </html>

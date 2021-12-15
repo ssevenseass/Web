@@ -15,6 +15,7 @@ nav ul {
     border-radius: 20px;
 }
 
+
 nav li {
     width: 25%;
 }
@@ -28,6 +29,9 @@ nav li a {
     text-decoration: none;
 
 }
+
+
+
 h1{
     font: 60px 'Century Gothic';
     font-weight: bold;
@@ -64,6 +68,8 @@ li {
     color: midnightblue;
     list-style-type: none;
 }
+
+
 footer {
     position: fixed;
     left: 0;
@@ -79,7 +85,13 @@ section{
     position: center;
 
 }
+ul li {
+    display: inline-block;
+}
 
+ul li:hover {
+    text-decoration: underline;
+}
 .picture {
     /*max-width: 22%;*/
     border-radius: 100%;
@@ -153,7 +165,25 @@ sup {
     margin-top: 100px;
 }
 
+
+
 .loadtime {
+    text-align: center;
+    border:5px solid midnightblue;
+    background: linear-gradient(whitesmoke, lightsteelblue);
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.table {
+    text-align: center;
+    border:5px solid midnightblue;
+    background: linear-gradient(whitesmoke, lightsteelblue);
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.todo {
     text-align: center;
     border:5px solid midnightblue;
     background: linear-gradient(whitesmoke, lightsteelblue);
@@ -163,4 +193,188 @@ sup {
 
 code {
     font-size: 15px;
+}
+.header_burger {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+
+    .header_burger span {
+        position: absolute;
+        background-color: midnightblue;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+
+    }
+    .header_burger:before,
+    .header_burger:after {
+        content: "";
+        background-color: midnightblue;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    .header_burger:before {
+        top: 0;
+
+    }
+    .header_burger:after {
+        bottom: 0;
+    }
+    .header_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(whitesmoke, lightsteelblue);
+        align-items: center;
+
+    }
+}
+.freeblock {
+    background: linear-gradient(whitesmoke, lightsteelblue);
+    margin-top: 100px;
+    height: 5%;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 100%;
+    height: 400px;
+    max-height: 100%;
+    z-index: 1010;
+    .display: flex;
+    border:5px solid midnightblue;
+    background: lightsteelblue;
+
+}
+
+.modal.open {
+    display: none;
+}
+
+
+.modal.closed {
+    display: none;
+}
+
+.modal-guts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* отступы */
+    padding: 20px 50px 20px 20px;
+    /* разрешим скролить */
+    overflow: auto;
+}
+
+.modal-overlay {
+    z-index: 1000;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+#menu_toggle {
+    opacity: 0;
+}
+
+.menu_btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu_btn > span,
+.menu_btn > span::before,
+.menu_btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: midnightblue;
+}
+
+.menu_btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu_btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu_box {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background: linear-gradient(whitesmoke, lightsteelblue);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+}
+
+.menu_item {
+    display: block;
+    padding: 12px 24px;
+    color: midnightblue;
+    font-family: 'Century Gothic';
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu_item:hover {
+    background-color: whitesmoke;
+}
+
+#menu_toggle:checked ~ .menu_btn > span {
+    transform: rotate(45deg);
+}
+
+#menu_toggle:checked ~ .menu_btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu_toggle:checked ~ .menu_btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu_toggle:checked ~ .menu_box {
+    visibility: visible;
+    left: 0;
 }
