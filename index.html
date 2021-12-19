@@ -9,24 +9,9 @@
 </head>
 
 <body>
-<!--<div class="wrapper">
-    <header class="h">
-        <div class="header_burger">
-            <span></span>
-        </div>
-        <nav class="header_menu">
-            <ul class="header_list">
-                <li> <a href= "#aboutme">About me</a></li>
-                <li><a href= "#myskills">My skills</a></li>
-                <li><a href="#myprojects">My projects</a></li>
-                <li><a href="#mycontacts">My contacts</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>-->
+
 <header>
-
-
+    
     <div class="firstblock">
         <div class="name">
             <h1>Kristina Kuksenko</h1>
@@ -118,18 +103,55 @@
 
     </div>
 
-
     <div class="loadtime">
         <a href="load.html"><h4><b>Check out load time!</b></h4></a>
     </div>
+    <div class="fetch">
+        <div class="container">
+            <div class="fetch__button">
+                <button id="btn" type="button" class="button">
+                    <b>Generation of images</b>
+                </button>
+            </div>
+            <div class="fetch__body" id="dV"></div>
+        </div>
+        <script>var btn = document.getElementById("btn").addEventListener('click',getPost);
+        var k = 0;
+        var div = document.getElementById("dV");
+        function getPost(){
+            fetch('https://jsonplaceholder.typicode.com/photos')
+                .then((response)=>{
+                    if(response.ok){
+                        return response.json();
+                    }else{
+                        throw new Error(response.status);
+                    }
+                })
+                .then((post) => {
+                    for(let index = 0; index < 1; index++){
+                        div.innerHTML +=`
+           <div class="card">
+           <img class="card-img" src="${post[k].thumbnailUrl}">
+           <div class="card-body">
+           <h4 class="card-title"><b>${post[k].id}</b></h4>
+           <h4 class="card-text"><b>${post[k].title}</b></h4>
+           </div>
+           </div>
+               `
+                        k = k+1;
+                    }
+                })
+                .catch((error)=>{
+                    document.getElementById('dV').innerHTML = '<div class="container"><p>Ошибка</p></div>';
+                    console.log("Ошибка: " + error);
+                });
 
+        }
+        </script>
+    </div>
     <div class="freeblock">
 
     </div>
-
-
-
-
 
 </main>
 <footer>
@@ -138,17 +160,5 @@
     </section>
 
 </footer>
-
-
-
-<!--<div class="modal" id="modal">
-     не скролиться
-    <button class="class-button" id="close-button">Закрыть</button>
-    <div class="modal-guts">
-        - скролиться
-    </div>
-</div>
-
-<div class="modal-overlay" id="modal-overlay"></div>-->
 </body>
 </html>

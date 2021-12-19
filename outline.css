@@ -248,51 +248,7 @@ code {
     margin-top: 100px;
     height: 5%;
 }
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    max-width: 100%;
-    height: 400px;
-    max-height: 100%;
-    z-index: 1010;
-    .display: flex;
-    border:5px solid midnightblue;
-    background: lightsteelblue;
 
-}
-
-.modal.open {
-    display: none;
-}
-
-
-.modal.closed {
-    display: none;
-}
-
-.modal-guts {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* отступы */
-    padding: 20px 50px 20px 20px;
-    /* разрешим скролить */
-    overflow: auto;
-}
-
-.modal-overlay {
-    z-index: 1000;
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-}
 
 #menu_toggle {
     opacity: 0;
@@ -378,4 +334,58 @@ code {
 #menu_toggle:checked ~ .menu_box {
     visibility: visible;
     left: 0;
+}
+
+.fetch{
+    padding-bottom: 30px;
+    margin-top: 100px;
+    border-radius: 20px;
+    height: 5%;
+}
+.fetch__body{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: space-around;
+    margin-top: 50px;
+}
+.card{
+    width: 400px;
+    height: 400px;
+    border: 5px solid midnightblue;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.card-body{
+    color: midnightblue;
+    padding: 5px;
+    font: 20px 'Century Gothic';
+    font-weight: bold;
+}
+.fetch__button{
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 100px;
+    font: 60px 'Century Gothic';
+}
+.card-img{
+    padding-top: 20px;
+}
+.button{
+    color: midnightblue;
+    font: 20px 'Century Gothic';
+    border: 5px solid midnightblue;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
